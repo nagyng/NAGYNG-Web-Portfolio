@@ -1,0 +1,80 @@
+/* 00_style.css */ 
+ @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+/* CSS Custom Properties */
+:root { 
+    /* 2025-03-15 */ 
+    --so_fresh: #000000;
+    --so_clean: #ffffff;
+    --padded_jacket: #C8D0D3;
+    --bucket_hat:  #2460A6;
+    --new_hair: #E4E4E4;
+    --new_tee: #DFDFDF;
+    --new_jeans:  #1F8AFF;
+    --do_you_see:  #B5B5B5;
+    --negai: #4136F6;
+    --negai_brighter:  #FFFFFF;
+
+    /* Color styles */
+    --black: rgba(0, 0, 0, 1);
+    --grayscale-90: rgba(28, 28, 30, 1);
+    --grayscale-80: rgba(44, 44, 46, 1);
+    --grayscale-70: rgba(54, 54, 57, 1);
+    --grayscale-60: rgba(72, 72, 74, 1);
+    --grayscale-50: rgba(99, 99, 102, 1);
+    --grayscale-40: rgba(142, 142, 147, 1);
+    --grayscale-30: rgba(174, 174, 178, 1);
+    --grayscale-20: rgba(198, 198, 198, 1);
+    --grayscale-10: rgba(244, 244, 244, 1);
+    --white: rgba(255, 255, 255, 1);
+    --blue-light-10: rgba(233, 241, 255, 1);
+    --blue-light-20: rgba(202, 222, 255, 1);
+    --blue-light-30: rgba(15, 98, 254, 1);
+    --blue-light-40: rgba(15, 86, 219, 1);
+    --blue-light-50: rgba(8, 71, 189, 1);
+    --blue-dark-10: rgba(69, 137, 255, 1);
+    --blue-dark-20: rgba(39, 103, 221, 1);
+    --blue-dark-30: rgba(27, 79, 175, 1);
+    --blue-dark-40: rgba(36, 50, 75, 1);
+    --blue-dark-50: rgba(32, 39, 52, 1);
+    --red-light-30: rgba(218, 30, 40, 1);
+    --red-light-40: rgba(186, 27, 35, 1);
+    --red-light-50: rgba(117, 14, 19, 1);
+    --red-dark-30: rgba(198, 52, 60, 1);
+    --red-dark-40: rgba(161, 43, 49, 1);
+    --red-dark-50: rgba(125, 27, 32, 1);
+    --green-light-30: rgba(52, 199, 89, 1);
+    --green-light-40: rgba(34, 163, 67, 1);
+    --green-dark-30: rgba(91, 189, 116, 1);
+    --green-dark-40: rgba(70, 149, 90, 1);
+
+    /* Text-size styles */
+    --h1: 36px;
+    --h2: 24px;
+    --h3: 18px;
+    --h4: 16px;
+    --body: 14px;
+    --button: 14px;
+    --caption-1: 12px;
+    --caption-2: 12px;
+}
+ 
+* { margin:0; padding: 0; /* 공통디자인: 마진/패딩 0 */ 
+    box-sizing: border-box;  /* width/height 기준: 외곽선 변경 */ } 
+body { /* body: 웹폰트 */ font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
+li {list-style-type: none;} 
+a { text-decoration: none;  color: var(--black);} 
+.primary-btn { /* 커스텀 버튼 */ background-color: var(--blue-light-30); color: white; font-size: 14px; border: 1px solid var(--blue-light-30); padding: 13px 16px 13px 16px; }
+ .primary-btn:active { /* 반응선택자 선택자:active  */ background-color: #004BD8; border: 1px solid #004BD8;  } 
+input[type="text"] { /* 커스텀 입력상자 속성선택자  */
+    background-color: var(--grayscale-10);
+    border-top: 1px solid var(--grayscale-10);
+    border-left: 1px solid var(--grayscale-10);
+    border-right: 1px solid var(--grayscale-10);
+    border-bottom: 1px solid var(--grayscale-40);  font-size: 1.5rem; /* 글자 크기 키움 */
+} 
+input[type="text"]:focus { /* focus :클릭시 커서가 나타남 */  outline: none; /* 포커스 시 기존의 외곽선이 사라짐 */ border: 1px solid var(--blue-light-30); }
+.line {background-color: lightgray; height: 1px;border: 0; margin: 1rem 0;} /* line 스타일 : height: 1px; border: 0 넣기 */ 
+table, tr, th, td {border-collapse: collapse; border: 1px solid var(--blue-light-10); padding: 1rem;} /* 테이블 디자인(공통) */
+th {color: var(--white);background-color: var(--blue-light-30);}
+html, body { margin: auto; padding: 0; width: 100vw; height: 100vh; background-color: var(--so_clean); overflow-x: hidden;}
+.clear {clear: both;}
