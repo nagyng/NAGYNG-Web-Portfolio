@@ -3,87 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Main Page</title>
     <!-- css -->
     <link rel="stylesheet" href="./css/00_style.css" />
     <link rel="stylesheet" href="./css/index.css" />
-    <!-- Swiper js -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <!-- AOS css: https://michalsnik.github.io/aos/ -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./img/icon/title.png" />
   </head>
-  <body> 
+  <body class="theme-dark">
+    <div id="dark-stripe-bg" class="show"></div>
+
     <div class="page">
       <div>
-        <div class="brand-box">
-          <h1 class="brand">
-            <a href="./index.html"><img src="./img/icon/title.png" alt="brand" />&nbsp;</a>
-          </h1>
-          <div class="profile">
-            <img src="./img/source/mlp (1).jpg" alt="profile" />
-            <!-- <img src="./img/main/Profile Picture.png" alt="profile" /> -->
+        <div class="brand-container">
+          <div class="brand-box"  data-aos="fade-right">
+            <h1 class="brand">
+              <a href="./index.html"
+                ><img src="./img/icon/title.png" alt="brand" />&nbsp;</a
+              >
+            </h1>
+            <div class="profile">
+              <img src="./img/main/Profile Picture.png" alt="profile" />
+            </div>
           </div>
-        </div>
 
-        <nav class="index-menu-container">
-            <div class="darkmode-box"> 
-                <div id="typing"></div>
+          <nav class="index-menu-container">
+            <div class="language-dropdown">
+              <button class="lang-toggle-btn">
+                <span class="flag">🇰🇷</span>
+              </button>
+              <ul class="lang-options">
+                <li data-lang="Kor">🇰🇷</li>
+                <li data-lang="Eng">🇺🇸</li>
+                <li data-lang="Ger">🇩🇪</li>
+              </ul>
+            </div>
+
+            <ul class="index-menu">
+              <li><a href="./projects.html">프로젝트</a></li>
+              <li><a href="./about.html">소개</a></li>
+              <li><a href="./contact.html">연락처</a></li>
+              <li><a href="#">블로그</a></li>
+            </ul>
+            <div class="grid-empty">&nbsp;</div>
+            <div class="star-button-box-container">
+              <div class="star-button-box" id="theme-color">
+                <p id="theme-color-text" class="theme-color-text">*</p>
+                <p id="current-mode-text" class="mode-label">다크모드 🌚</p>
               </div>
-          <ul class="theme-lang">
-            <li>Kor</li>
-            &nbsp;|&nbsp;
-            <li>Eng</li>
-            &nbsp;|&nbsp;
-            <li>Ger</li>
-            <br />
-          </ul>
-          <ul class="index-menu">
-            <li><a href="./projects.html">PROJEKTS</a></li>
-            <li><a href="./about.html">ÜBER</a></li>
-            <li><a href="./community.html">KONTAKT</a></li>
-            <li><a href="./contact.html">FOLGEN SIE UNS</a></li>
-          </ul>
-          <div class="star-button-box">
-            <p>*</p>
-          </div>
-        </nav>
+            </div>
+          </nav>
+        </div>
 
         <div class="container clear">
           <div class="content-area clear">
-            <aside> 
-              <ul class="index-small-menu">
-                <li><a href="#">Branding</a></li> 
-                <li><a href="#">Website</a></li>
-                <li><a href="#">Packaging</a></li>
-                <li><a href="#">Interior</a></li>
+            <div class="darkmode-box">
+              <div id="typing"></div>
+            </div>
+            <aside>
+              <ul class="index-small-menu" data-aos="fade-right">
+                <li>
+                  <a class="index-small-menu-a" href="#"><p>브랜딩</p></a>
+                </li>
+                <li>
+                  <a class="index-small-menu-a" href="#"><p>웹사이트</p></a>
+                </li>
+                <li>
+                  <a class="index-small-menu-a" href="#"><p>패키지</p></a>
+                </li>
+                <li>
+                  <a class="index-small-menu-a" href="#"><p>인테리어</p></a>
+                </li>
               </ul>
             </aside>
-            <div class="content-box">
+            <div class="content-box" data-aos="fade-left">
               <p class="title01">01</p>
-              <!-- <p class="title02" id="typing"></p> -->
               <p class="title02">Nagyng</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./js/index.js"></script>
   </body>
-  <!-- jquery cdn(인터넷주소) -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <!-- Typed.js 플러그인 인터넷주소 -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <!-- Swiper JS: 공식사이트) https://swiperjs.com/demos -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- AOS js: https://michalsnik.github.io/aos/ -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- isotope cdn(인터넷주소) -->
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-
-  <!-- js -->
-  <script src="./js/index.js"></script>
-</html> 
+</html>
