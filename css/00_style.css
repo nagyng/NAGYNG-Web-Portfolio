@@ -76,5 +76,5 @@ input[type="text"]:focus { /* focus :클릭시 커서가 나타남 */  outline: 
 .line {background-color: lightgray; height: 1px;border: 0; margin: 1rem 0;} /* line 스타일 : height: 1px; border: 0 넣기 */ 
 table, tr, th, td {border-collapse: collapse; border: 1px solid var(--blue-light-10); padding: 1rem;} /* 테이블 디자인(공통) */
 th {color: var(--white);background-color: var(--blue-light-30);}
-html, body { margin: auto; padding: 0; width: 100vw; height: 100vh; background-color: var(--so_clean); overflow-x: hidden;}
+html, body { margin: auto; padding: 0; width: 100vw; min-height: 100vh; background-color: var(--so_clean); overflow-x: hidden;}
 .clear {clear: both;}
