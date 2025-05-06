@@ -8,7 +8,7 @@ body { width: 100%; height: 100%; position: relative; }
 
 /* 페이지 전체 */ 
 .page { gap: 1rem; padding: 1rem; overflow: hidden; 
-     /* background-color: var(--so_clean);  */
+      background-color: var(--so_clean);  
 } 
 img:hover, p:hover, a:hover, li:hover, .darkmode-box:hover { scale: 1.05; transition: all ease 0.5s; } 
 .hover:hover { scale: 1.05; transition: all ease 0.5s; } 
