@@ -1,0 +1,204 @@
+/* index.css */ 
+
+body { width: 100%; height: 100%; position: relative; } 
+::-webkit-scrollbar { display: none; } 
+
+/* 마우스 커서 */ 
+* { cursor: url('../img/icon/cursoranimation.png'), auto; } 
+
+/* 페이지 전체 */ 
+.page { gap: 1rem; padding: 1rem; overflow: hidden; 
+     /* background-color: var(--so_clean);  */
+} 
+img:hover, p:hover, a:hover, li:hover, .darkmode-box:hover { scale: 1.05; transition: all ease 0.5s; } 
+.hover:hover { scale: 1.05; transition: all ease 0.5s; } 
+.italic { font-style: italic; } 
+.italic-highlight { font-size: larger; color: var(--do_you_see); font-style: italic; } 
+ 
+/* 모드 변경 */ 
+ body.theme-dark { background: repeating-linear-gradient(
+ 90deg,
+ var(--so_fresh),
+ var(--so_fresh) 0.1rem,
+ var(--new_hair) 0,
+ var(--new_hair) 5.875rem
+ ); } 
+ /* body.theme-dark, */
+ body.theme-lightA,
+ body.theme-lightB { background: none; } 
+
+
+ /* 버튼 아래 텍스트 */
+.mode-label { font-size: 1rem; color: var(--so_fresh); text-align: center; margin-top: 0.3rem; transition: color 0.3s ease; } 
+
+/* 모드 변경 알림 오버레이 */
+#mode-overlay { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 4rem; font-weight: bold; color: var(--do_you_see); opacity: 0; pointer-events: none; z-index: 10000; mix-blend-mode: normal; transition: opacity 0.6s ease; } 
+
+
+ /* 언어 설정 버튼 */
+ .theme-lang li.active { font-weight: bold; color: var(--new_jeans); } 
+ .theme-lang { display: flex; justify-content: center; align-items: center; width: 12rem; /* 독일어 기준 너비로 고정 (필요시 조정) */
+ margin: 0 auto; text-align: center; gap: 0.5rem; /* 요소 간 간격 */ } 
+ .theme-lang li { cursor: pointer; min-width: 3rem; /* 글자 크기에 따라 흐트러지지 않게 최소 너비 보장 */
+ text-align: center; } 
+ 
+ /* 언어 설정 업데이트 */
+ .language-dropdown { position: relative; display: inline-block; min-width: 5rem; align-items: center; } 
+ .lang-toggle-btn { width: 100%; font-size: 1rem; background: none; border: none; cursor: pointer; } 
+ .lang-options { position: absolute; top: 2.5rem; left: 0; width: 100%; background-color: white; border: 1px solid var(--new_hair); border-radius: 0.5rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); list-style: none; padding: 0.2rem 0; display: none; z-index: 999; } 
+ .lang-options li { font-size: 1rem; text-align: center; padding: 0.3rem 0; cursor: pointer; } 
+ .lang-options li:hover { background-color: var(--new_tee); } 
+ .language-dropdown.active .lang-options { display: block; } 
+ 
+.index-small-menu > li { width: fit-content; height: auto; } 
+.index-small-menu-a > p { font-size: 1.5rem; color: var(--do_you_see); height: auto; } 
+.index-small-menu-a > p:hover { color: var(--so_fresh); height: auto; } 
+.brand > a > img { width: 8rem; height: auto; margin: 0.5rem 0.5rem 0.5rem 0rem; } 
+/* .profile { height: 17rem; margin: 0.5rem 0rem; width: 100%; } */
+/* .profile img { width: 100%; height: 100%; object-fit: cover; margin: auto; } */
+ .profile_pc { display: block; width: fit-content; height: fit-content; padding: 2rem 0.5rem 0 0.5rem; margin: auto; text-align: center; } 
+ .profile_pc > img { width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; margin: auto; } 
+.index-menu-container, .darkmode-box { justify-content: space-between; } 
+.theme-lang, .content-box { display: flex; } 
+.theme-color-text { font-size: 2.2rem; color: var(--so_fresh); text-align: center; margin-right: 2rem; } 
+#theme-color > p { transition: margin-right 0.4s ease; } 
+ 
+.title01 { font-weight: bold; font-size: 5vw; bottom: 20vw; right: 1.2rem; position: absolute; } 
+.title02 { font-weight: bold; font-size: 15vw; bottom: 2rem; right: 1rem; position: absolute; } 
+
+.introduction-box { display: block; width: 100%; height: fit-content; clear: both; } 
+.introduction-text { font-size: 1.2rem; font-weight: bold; color: var(--so_fresh); text-align: center; margin: 1rem auto 1rem auto; width: 100%; height: 100%; } 
+
+.container-01 { width: 100%; height: 100%; margin-bottom: 5rem; } 
+.container-0428 { margin: auto; text-align: center; padding: 0; width: 100%; height: fit-content; } 
+ 
+
+ 
+
+/* 모바일 기준 리커스텀 */ 
+
+/* 헤더카피css로 이동 */
+/*
+.brand-container { grid-template-columns: repeat(4, 1fr); } 
+.brand-box { grid-column: span 4; width: 100%; } 
+.brand-box > a { width: fit-content; height: fit-content; } 
+.index-menu-container { display: grid; grid-template-columns: repeat(3, 1fr);
+     justify-content: end; width: fit-content; height: fit-content; 
+     }  
+.index-menu { font-weight: bold; margin-left: 0.5rem; height: auto; } 
+.star-button-box { width: 4.5rem; height: 2rem; border: 1px solid var(--so_fresh); border-radius: 3rem; } 
+ .content-box { grid-column: span 3; } 
+ .container { grid-column: span 4; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; } 
+ .star-button-box-container,
+ .index-menu,
+ aside { grid-column: span 1; } 
+ .darkmode-box { grid-column: span 3; justify-self: start; display: flex; margin: 1rem 0; }  
+ .star-button-box-container { width: fit-content; height: fit-content; } 
+ */ 
+ .title-v2 > * { filter: blur(5px); opacity: calc(10%); } 
+ .title01-v2 { width: fit-content; height: fit-content; font-weight: bold; font-size: 5vw; position: absolute; top:36rem; right:1rem; } 
+ .title02-v2 { width: fit-content; height: fit-content; font-weight: bold; font-size: 15vw; position: absolute; top:36rem; right:1rem; } 
+
+.btn-main-black { margin-bottom: 0.5rem; background-color: black; color: white; font-size: 1rem; font-weight: bloder; padding: 1rem; border-radius: 1rem; border: none; } 
+.btn-main-black:hover { background-color: var(--new_jeans); transition: all ease 0.5s; } 
+.btn-main-green { margin-bottom: 2rem; background-color: rgb(222, 255, 222); color: green; font-size: 1rem; font-weight: bloder; padding: 1rem; border-radius: 5rem; border: none; } 
+
+
+
+
+/* Tablet (768px ~ 1023px, 6-cols) */
+@media screen and (min-width: 768px) and (max-width: 1023px){
+ .page { gap: 1rem; padding: 1.5rem; overflow: hidden; } 
+ .brand-container { grid-template-columns: repeat(6, 1fr); display: flex; justify-content: space-between; } 
+ .brand-box { grid-column: span 3; width: fit-content; } 
+ .index-menu-container { grid-column: span 3; gap: 1rem; grid-template-rows: auto; display: flex; } 
+ aside { grid-column: span 1; } 
+ .index-menu { grid-column: span 1; } 
+ .star-button-box-container { grid-column: span 1; } 
+ body.theme-dark { background: repeating-linear-gradient(
+ 90deg,
+ var(--so_fresh),
+ var(--so_fresh) 0.1rem,
+ var(--new_hair) 0,
+ var(--new_hair) 8rem
+ ); } 
+ .title01 { bottom: 17vw; right: 1.5rem; } 
+ .index-menu { min-width: 13.5vw; margin: 0; } 
+ .content-box { grid-column: span 6; } 
+ .grid-empty { display: none; } 
+ /* .profile { width: 20rem; } */  
+
+ .resume-box-container { margin-top: 5rem; margin-bottom: 3rem; } 
+ .resume-box-content { grid-template-columns: repeat(2, 1fr); display: flex; justify-content: space-between; width: 100%; height: fit-content; } 
+ .resume-box-img { grid-column: span 1; width: 50%; margin: auto; padding: 0; text-align: center; } 
+ .resume-box-des { grid-column: span 1; width: 50%; margin: auto; padding: 0; text-align: left; } 
+ .resume-box-img > img { width: 80%; height: auto; margin: 0; } 
+ .resume-box-des > img { width: 1.5rem; height: auto; } 
+ 
+ 
+.btn-main-black { margin-bottom: 5rem; }  
+.btn-main-green { margin-bottom: 5rem; } 
+
+.lang-toggle-btn { width: 100%; font-size: 1.8rem; background: none; border: none; cursor: pointer; } 
+.lang-options li { font-size: 1.6rem; text-align: center; padding: 0.3rem 0; cursor: pointer; } 
+
+.introduction-text { font-size: 1.5rem; }
+
+.title01-v2, .title02-v2 { top: 42rem; } 
+.title02-v2 { font-size: 17vw; } 
+
+.container-01  { width: 100%; height: 100%; margin-bottom: 12rem; }
+
+}
+ 
+ /* Desktop (min-width: 1024px, 12-cols) */
+ @media screen and (min-width: 1024px){
+ .page { padding: 1.5rem; overflow: hidden; } 
+ body.theme-dark { background: repeating-linear-gradient(
+ 90deg,
+ var(--so_fresh),
+ var(--so_fresh) 0.1rem,
+ var(--new_hair) 0,
+ var(--new_hair) 142px 
+ ); } 
+ .title01 { bottom: 16vw; right: 1.5rem; } 
+ .title02 { font-size: 17vw; } 
+ .brand-container { grid-template-columns: repeat(12, 1fr); display: flex; justify-content: space-between; } 
+ .brand-box { grid-column: span 5; } 
+ .index-menu-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0rem; justify-content: end; width: fit-content; } 
+ .index-menu { min-width: 7.5vw; grid-column: span 1; } 
+ .star-button-box-container { min-width: 7.5vw; grid-column: span 1; } 
+ .content-box { clear: both; width: fit-content; height: fit-content; z-index: -1; overlay: 30; } 
+ .content-box > * { margin: 0; width: auto; height: auto; } 
+ .container { grid-column: span 12; } 
+ aside { grid-column: span 1; } 
+ .darkmode-box { grid-column: span 1; } 
+ .star-button-box { margin-left: 1rem; } 
+ .grid-empty { display: none; } 
+
+ /* .profile { display: none; } */
+ .profile_pc { display: block; width: fit-content; height: fit-content; padding: 2rem 0.5rem 0 0.5rem; margin: auto; text-align: center; } 
+ .profile_pc > img { width: 5rem; height: 5rem; border-radius: 50%; object-fit: cover; margin: auto; } 
+/* border: 5px solid var(--so_fresh); */
+
+.resume-box-container { margin-top: 5rem; margin-bottom: 3rem; } 
+.resume-box-content { grid-template-columns: repeat(2, 1fr); display: flex; justify-content: space-between; width: 100%; height: fit-content; } 
+.resume-box-title { font-size: 5rem; } 
+.resume-box-img { grid-column: span 1; margin: auto; padding: 0; text-align: center; width: 50%; } 
+.resume-box-des { grid-column: span 1; width: 50%; margin: auto; padding: 0; text-align: left; } 
+
+.introduction-box { display: block; width: 100%; height: fit-content; clear: both; } 
+.introduction-text { font-size: 2rem; } 
+
+.container-01 { width: 100%; height: 100%; margin-bottom: 7rem; } 
+
+.title-v2 { top: 34rem; } 
+.title02-v2 { font-size: 17vw; } 
+
+.btn-main-black { margin-bottom: 5rem; } 
+
+.lang-toggle-btn { width: 100%; font-size: 1.8rem; background: none; border: none; cursor: pointer; } 
+.lang-options li { font-size: 1.6rem; text-align: center; padding: 0.3rem 0; cursor: pointer; } 
+
+ }
+ 

@@ -1,0 +1,61 @@
+/* project.css */
+
+/* body { width: 100%; height: 100%; background-color: var(--so_clean); margin: 0; padding: 0; overflow-x: hidden; overflow-y: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }  */
+ 
+/* .page { width: 100%; height: auto; margin: 0 auto; background-size: 100% 1.2rem; }  */
+.projects-page { width: 100%; height: auto; margin: 0 auto; background-size: 100% 1.2rem; 
+    gap: 1rem; padding: 1rem; background-color: var(--so_clean); border-radius: 30px; 
+}  
+
+/* .star-button-box-container { display: none; }  */
+ 
+/* 화면 전체에 bucket_hat 색상의 screen 오버레이 */
+/* #overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: var(--bucket_hat); mix-blend-mode: screen; pointer-events: none; z-index: 9999; }  */
+ 
+/* 컨텐츠 */
+.content {width: 100%; height: auto;}
+.post-content { width: 100%; height: auto; } 
+.post-row {width: 100%; height: auto; margin: 0; padding: 0;}
+.post-box { width: 100%; height: auto; margin: 1rem 0 3rem 0; }  
+.post-title { line-height: 1.3; font-size: 25px; font-weight: bold;  } 
+.post-title, .post-details {margin: 0 1rem;}
+.post-date { font-style: italic; margin-bottom: 0.5rem;}
+.post-details { font-size: 12px; margin-top: 2rem; margin-bottom: 1rem;}
+.post-preview { width: 100%; height: 100%; overflow: hidden; align-items: center; text-align: center; }
+.post-preview > img { width: 100%; height: 12rem; object-fit: cover; background-color: var(--so_fresh); }
+.post-preview > img:hover { scale: 1.05; transition: all ease 0.5s; } 
+
+
+
+
+/* Tablet (768px ~ 1023px, 6-cols) */
+@media screen and (min-width: 768px) and (max-width: 1023px){ 
+.projects-page { border-radius: 50px; }
+.post-box { margin: 2rem 0 6rem 0;}
+ .post-content { width: 100%; height: auto; margin: 0; padding: 1rem 0rem 2rem 1.5rem; } 
+ .post-row {display: flex; flex-direction: row; margin-top: 1.5rem;}
+ .post-title { line-height: 1.3; font-size: 40px; margin: 0; padding-right: 10rem; font-weight: bold; } 
+ .post-details { width: 30%; font-size: 1rem; margin: 0; }
+ .post-preview { width: 70%; height: fit-content; }
+ .post-preview > img { width: 100%; height: 18rem; }
+ .post-date { margin-bottom: 2.5rem; }
+ .post-text { margin-right: 2rem;}
+ } 
+ 
+/* Desktop (min-width: 1024px, 12-cols) */
+@media screen and (min-width: 1024px){
+ .projects-page { border-radius: 100px; }
+ .post-box { margin: 1rem 0 6rem 0; padding-left: 1.5rem;}
+ .post-content { width: 100%; height: auto; padding: 1.5rem 0 0 1.5rem; } 
+ .post-row {display: flex; flex-direction: row; margin-top: 3rem;}
+ .post-title { line-height: 1; font-size: 75px; margin: 0; padding-right: 15rem; font-weight: bold; } 
+ .post-details { line-height: 1.5; width: 30%; margin: 0 3rem 0 0; }
+ .post-preview { width: 70%; height: fit-content;}
+ /* .post-preview > img { width: 80%; height: 38.4rem;} */
+ .post-preview > img { width: 85%; height: 35rem;}
+ .post-date { font-size: 1.5rem; margin-bottom: 3.5rem; }
+ .post-text { font-size: 1.2rem; }
+ }
+ 
+ 
+ 
