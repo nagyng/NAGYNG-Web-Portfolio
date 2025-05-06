@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Page</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/00_style.css" />
+    <link rel="stylesheet" href="./css/indexcopy.css" />
+    <link rel="stylesheet" href="./css/headercopy.css" />
+    <link rel="stylesheet" href="./css/footercopy.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/icon/title.png" />
+  </head>
+  <body class="theme-dark"> 
+    <div id="dark-stripe-bg" class="show"></div>
+
+    <div class="page">
+      <div>
+        <div id="fab">⬆️</div>
+        <div class="brand-container">
+          <div class="brand-box">
+            <h1 class="brand">
+              <a href="./indexcopy.html"
+                ><img src="./img/icon/title.png" alt="brand" />&nbsp;</a
+              >
+            </h1>
+            <!-- 
+            <div class="profile">
+              <img src="./img/main/Profile Picture.png" alt="profile" /> 
+            </div> -->
+          </div>
+
+          <div class="fab">
+            <a href="#none"
+              ><img src="./img/icon/11_5_icon_1.png" alt="햄버거메뉴"
+            /></a>
+          </div>
+          
+          <nav class="index-menu-container">
+            <div class="language-dropdown">
+              <button class="lang-toggle-btn">
+                <span class="flag">🇰🇷 한국어</span>
+              </button>
+              <ul class="lang-options">
+                <li data-lang="Kor">🇰🇷 한국어</li>
+                <li data-lang="Eng">🇺🇸 English</li>
+                <li data-lang="Ger">🇩🇪 Deutsch</li>
+              </ul>
+            </div>
+
+            <ul class="index-menu">
+              <li><a href="./projects.html">프로젝트</a></li>
+              <li><a href="./contact.html">연락처</a></li>
+              <li><a href="#">블로그</a></li>
+            </ul>
+
+            <div class="star-button-box-container">
+              <div class="star-button-box" id="theme-color">
+                <p id="theme-color-text" class="theme-color-text">*</p>
+                <p id="current-mode-text" class="mode-label">다크모드 🌚</p>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="introduction-box">
+          <div class="profile_pc">
+            <img src="./img/main/Profile Picture.png" alt="profile" />
+            <!-- <img src="./img/main/adventuretime.png" alt="profile" />   -->
+          </div>
+          <div class="introduction-text">
+            <p class="introduction-text-1">
+              안녕하세요, <span class="italic-highlight">나경</span>입니다!
+            </p>
+            <p class="introduction-text-2">
+              저는 <span class="italic-highlight">디자이너</span> 준비생이자
+              <span class="italic-highlight">코더</span>로서,
+            </p>
+            <p class="introduction-text-3">
+              웹사이트 <span class="italic-highlight">디자인</span>과
+              <span class="italic-highlight">개발</span>을 통해
+              <br />
+              브랜드의 <span class="italic-highlight">가치</span>를 높이고
+              있습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="section container-0428">
+          <div class="section-box" data-aos="fade-up">
+            <!-- 버튼 카테고리 -->
+            <div>
+              <div class="btn-box-container" data-aos="fade-left">
+                <div class="btn-box">
+                  <input
+                    type="button"
+                    value=" Contact me "
+                    class="btn-main-black"
+                    id="btn-main-black"
+                  />
+                  &nbsp;
+                  <input
+                    type="button"
+                    value=" &lt; > Available for new project "
+                    class="btn-main-green"
+                    id="btn-main-green"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .section end -->
+        </div>
+
+        <div class="container clear container-01">
+          <div class="content-area clear">
+            <div class="darkmode-box">
+              <div id="typing"></div>
+            </div>
+            <aside>
+              <ul class="index-small-menu">
+                <li>
+                  <a class="index-small-menu-a" href="#"
+                    ><p>📁 포스터 디자인</p></a
+                  >
+                </li>
+                <li>
+                  <a class="index-small-menu-a" href="#"
+                    ><p>📁 웹 페이지 디자인</p></a
+                  >
+                </li>
+                <li>
+                  <a class="index-small-menu-a" href="#"
+                    ><p>📁 일러스트 디자인</p></a
+                  >
+                </li>
+                <li>
+                  <a class="index-small-menu-a" href="#"
+                    ><p>📁 영상 디자인</p></a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+        <!-- .container end -->
+
+        <div
+          class="title-v2"
+          style="width: 100%; height: 100%; text-align: right"
+        >
+          <p class="title01-v2">01</p>
+          <p class="title02-v2">Nagyng</p>
+        </div>
+
+        <div id="projects" class="projects"></div>
+      </div> 
+    </div>
+    
+
+    <div id="footer"></div>
+
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./js/indexcopy.js"></script>
+    <script>
+      // include header and footer
+      $(function () {
+        $("#header").load("header.html");
+        $("#footer").load("footercopy.html");
+      });
+
+      // projects.html
+      $(function () {
+        $("#projects").load("projectscopy.html");
+      });
+
+      $(document).ready(function () {
+        AOS.init();
+      });
+    </script>
+  </body>
+</html>
