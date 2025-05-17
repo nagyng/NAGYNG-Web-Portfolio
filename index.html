@@ -10,9 +10,20 @@
     <link rel="stylesheet" href="./css/headercopy.css" />
     <link rel="stylesheet" href="./css/footercopy.css" />
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="./img/icon/title.png" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./img/main/emoji-playful-face.png"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
-  <body class="theme-dark"> 
+  <body class="theme-dark">
     <div id="dark-stripe-bg" class="show"></div>
 
     <div class="page">
@@ -21,10 +32,11 @@
         <div class="brand-container">
           <div class="brand-box">
             <h1 class="brand">
-              <a href="./index.html"
+              <a href="./indexcopy.html"
                 ><img src="./img/icon/title.png" alt="brand" />&nbsp;</a
               >
             </h1>
+        <div class="typing" id="typing"></div>
             <!-- 
             <div class="profile">
               <img src="./img/main/Profile Picture.png" alt="profile" /> 
@@ -36,7 +48,38 @@
               ><img src="./img/icon/11_5_icon_1.png" alt="햄버거메뉴"
             /></a>
           </div>
-          
+
+          <!-- 기존 nav 앞에 삽입 -->
+          <div class="fixed-menu-box">
+            <ul class="index-menu">
+              <li><a href="./projects.html">프로젝트</a></li>
+              <li><a href="./contact.html">연락처</a></li>
+              <li><a href="#">블로그</a></li>
+            </ul>
+
+            <!-- 추가된 항목 -->
+            <div class="fixed-language-theme">
+              <div class="language-dropdown">
+                <button class="lang-toggle-btn">
+                  <span class="flag">🇰🇷 한국어</span>
+                </button>
+                <ul class="lang-options">
+                  <li data-lang="Kor">🇰🇷 한국어</li>
+                  <li data-lang="Eng">🇺🇸 English</li>
+                  <li data-lang="Ger">🇩🇪 Deutsch</li>
+                </ul>
+              </div>
+              <div class="star-button-box-container">
+                <div class="star-button-box" id="theme-color">
+                  <p id="theme-color-text" class="theme-color-text">*</p>
+                  <p id="current-mode-text" class="mode-label">흑백모드 🌚</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 기존 nav -->
+          <!--
           <nav class="index-menu-container">
             <div class="language-dropdown">
               <button class="lang-toggle-btn">
@@ -48,12 +91,12 @@
                 <li data-lang="Ger">🇩🇪 Deutsch</li>
               </ul>
             </div>
-
+             
             <ul class="index-menu">
               <li><a href="./projects.html">프로젝트</a></li>
               <li><a href="./contact.html">연락처</a></li>
               <li><a href="#">블로그</a></li>
-            </ul>
+            </ul> 
 
             <div class="star-button-box-container">
               <div class="star-button-box" id="theme-color">
@@ -62,27 +105,26 @@
               </div>
             </div>
           </nav>
+          -->
         </div>
+        
 
         <div class="introduction-box">
           <div class="profile_pc">
-            <img src="./img/main/Profile Picture.png" alt="profile" />
-            <!-- <img src="./img/main/adventuretime.png" alt="profile" />   -->
+            <img src="./img/main/emoji-playful-face-wide.png" alt="profile" /> 
           </div>
           <div class="introduction-text">
             <p class="introduction-text-1">
-              안녕하세요, <span class="italic-highlight">나경</span>입니다!
+              안녕하세요, <span class="italic-highlight">나경 </span>입니다!
             </p>
             <p class="introduction-text-2">
-              저는 <span class="italic-highlight">디자이너</span> 준비생이자
-              <span class="italic-highlight">코더</span>로서,
+              웹사이트<span class="italic-highlight">디자인 </span>과
+              <span class="italic-highlight">개발 </span>을 통해 <br />
+              브랜드의 <span class="italic-highlight">가치 </span>를 높이는
             </p>
             <p class="introduction-text-3">
-              웹사이트 <span class="italic-highlight">디자인</span>과
-              <span class="italic-highlight">개발</span>을 통해
-              <br />
-              브랜드의 <span class="italic-highlight">가치</span>를 높이고
-              있습니다.
+              <span class="italic-highlight"> 디자이너 </span> 준비생이자
+              <span class="italic-highlight">코더</span>입니다.
             </p>
           </div>
         </div>
@@ -95,16 +137,16 @@
                 <div class="btn-box">
                   <input
                     type="button"
-                    value=" Contact me "
-                    class="btn-main-black"
-                    id="btn-main-black"
+                    value=" 연락하기 "
+                    class="btn-main-contact"
+                    id="btn-main-contact"
                   />
                   &nbsp;
                   <input
                     type="button"
-                    value=" &lt; > Available for new project "
-                    class="btn-main-green"
-                    id="btn-main-green"
+                    value=" &lt; > 새 프로젝트를 적극 환영합니다! "
+                    class="btn-main-available"
+                    id="btn-main-available"
                   />
                 </div>
               </div>
@@ -113,39 +155,44 @@
           <!-- .section end -->
         </div>
 
+        
+
         <div class="container clear container-01">
           <div class="content-area clear">
             <div class="darkmode-box">
-              <div id="typing"></div>
+              <!-- <div id="typing"></div> -->
             </div>
-            <aside>
+
+            <!-- <aside>
               <ul class="index-small-menu">
                 <li>
                   <a class="index-small-menu-a" href="#"
-                    ><p>📁 포스터 디자인</p></a
+                    ><p>⭐ 포스터 디자인</p></a
+                  >
+                </li>
+                <li>
+                  <a class="index-small-menu-a" id="web-pj" href="#"
+                    ><p>⭐ 웹 페이지 디자인</p></a
                   >
                 </li>
                 <li>
                   <a class="index-small-menu-a" href="#"
-                    ><p>📁 웹 페이지 디자인</p></a
+                    ><p>⭐ 일러스트 디자인</p></a
                   >
                 </li>
                 <li>
                   <a class="index-small-menu-a" href="#"
-                    ><p>📁 일러스트 디자인</p></a
-                  >
-                </li>
-                <li>
-                  <a class="index-small-menu-a" href="#"
-                    ><p>📁 영상 디자인</p></a
+                    ><p>⭐ 영상 디자인</p></a
                   >
                 </li>
               </ul>
-            </aside>
+            </aside> -->
           </div>
         </div>
         <!-- .container end -->
 
+
+        <!-- 배경 로고 타이포 디자인 -->
         <div
           class="title-v2"
           style="width: 100%; height: 100%; text-align: right"
@@ -154,11 +201,151 @@
           <p class="title02-v2">Nagyng</p>
         </div>
 
-        <div id="projects" class="projects"></div>
-      </div> 
-    </div>
-    
+        <!-- 확대 보기 -->
+        <div id="slider-modal" class="slider-modal hidden">
+          <span class="close-btn">✕</span>
+          <img id="modal-img" src="" alt="fullscreen" />
+        </div>
 
+        <!-- principles -->
+        <div class="principles-container">
+          <div class="principles-section-box">
+            <p class="principles-section-title">나경의 디자인 원칙</p>
+            <p class="principles-section-subtitle">Nagyng's Principles</p>
+            <div data-aos="fade-up">
+              <p class="principles-section-desc ps-d1">
+                DESIGN MEETS<br />DEVELOPMENT
+              </p>
+              <p class="principles-section-desc ps-d3">
+                <span class="highlight-ps">&quot;개발&quot;</span> 이라는
+                꽃봉우리에서
+              </p>
+              <p class="principles-section-desc ps-d4">
+                <span class="highlight-ps">&quot;디자인&quot;</span> 이라는 꽃을
+                피우다
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- NEW aside -->
+            <aside class="service-cards"  data-aos="fade-up">
+              <div class="card">
+                <img src="./img/prog-lang-icons/Photoshop.png" alt="포스터 디자인" />
+                <!-- <img src="./img/projects/slider/photoshop/환경포스터-양나경.jpg" alt="포스터 디자인" /> -->
+                <p>⭐ 포스터 디자인</p>
+              </div>
+              <div class="card">
+                <img src="./img/prog-lang-icons/Figma.png" id="web-pj" alt="웹 페이지 디자인" />
+                <!-- <img src="./img/projects/Mac Studio.png" id="web-pj" alt="웹 페이지 디자인" /> -->
+                <p>⭐ 웹 페이지 디자인</p>
+              </div>
+              <div class="card">
+                <img
+                  src="./img/prog-lang-icons/Illustrator.png"
+                  alt="일러스트 디자인"
+                />
+                <p>⭐ 일러스트 디자인</p>
+              </div>
+              <div class="card">
+                <img src="./img/prog-lang-icons/Premier Pro.png" alt="영상 디자인" />
+                <p>⭐ 영상 디자인</p>
+              </div>
+            </aside>
+
+        <!-- 슬라이더 -->
+        <div class="slider-wrapper">
+          <div class="auto-slider">
+            <img
+              src="./img/projects/slider/photoshop/17422222.png"
+              alt="1"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/1747109005001-c305d50b-a46b-49ce-a72b-82de56c44ff0_1.png"
+              alt="2"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/photoshop_testpng.png"
+              alt="3"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/메뉴판.jpg"
+              alt="4"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/환경보호포스터-양나경.jpg"
+              alt="5"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/환경포스터-양나경.jpg"
+              alt="6"
+              class="slider-item"
+            />
+            <!-- 필요한 만큼 추가 -->
+            <img
+              src="./img/projects/slider/photoshop/17422222.png"
+              alt="1"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/1747109005001-c305d50b-a46b-49ce-a72b-82de56c44ff0_1.png"
+              alt="2"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/photoshop_testpng.png"
+              alt="3"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/메뉴판.jpg"
+              alt="4"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/환경보호포스터-양나경.jpg"
+              alt="5"
+              class="slider-item"
+            />
+            <img
+              src="./img/projects/slider/photoshop/환경포스터-양나경.jpg"
+              alt="6"
+              class="slider-item"
+            />
+          </div>
+        </div>
+
+
+        <!-- 프로젝트 섹션 -->
+        <div
+          id="projects-container"
+          class="projects-container"
+          data-aos="fade-up"
+        >
+          <div class="projects-intro-container">
+            <div class="projects-intro-section-box">
+              <p class="projects-intro-section-title">나경의 프로젝트</p>
+              <p class="projects-intro-section-subtitle">Nagyng's Portfolio</p>
+            </div>
+          </div>
+          <div id="projects" class="projects"></div>
+        </div>
+
+        <!-- 확대 보기 -->
+        <div id="slider-modal" class="slider-modal hidden">
+          <span class="close-btn">✕</span>
+          <img id="modal-img" src="" alt="fullscreen" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 섹션 -->
     <div id="footer"></div>
 
     <!-- js -->
