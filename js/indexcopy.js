@@ -12,29 +12,28 @@ let typed = new Typed("#typing", {
   typeSpeed: 50,
 });
 
+// isotope.js 플러그인
+
 // AOS 플러그인
 $(document).ready(function () {
   AOS.init();
 });
 
-// headercopy.js 
+// headercopy.js
+
 // #fab 이모지 스크롤탑
 $(function () {
   $("#fab").click(function () {
-    // #fab 를 클릭하면
-    $("html").animate({ scrollTop: 0, behavior: 'smooth' }, 1000);
-  });
-}); 
-  
-// 햄버거(.fab) 클릭하면 메뉴(.index-menu) 보이기/숨기기
-$(function () {
-  $(".fab").click(function () {
-    $(".index-menu-container").toggle();
+    $("html").animate({ scrollTop: 0, behavior: "smooth" }, 1000);
   });
 });
- 
 
-// isotope.js 플러그인 
+// 햄버거 토글 코드 강화:
+$(function () {
+  $(".fab").click(function () {
+    $(".index-menu-container").toggleClass("show");
+  });
+});
 
 // 테마 변경
 let themeState = 0;
@@ -95,9 +94,9 @@ document.getElementById("theme-color").addEventListener("click", () => {
 const currentModeText = document.getElementById("current-mode-text");
 
 const modeNames = {
-  Kor: ["다크모드 🌚", "라이트A ☀️", "라이트B ☀️"],
-  Eng: ["Dark 🌚", "LightA ☀️", "LightB ☀️"],
-  Ger: ["Dark 🌚", "LightA ☀️", "LightB ☀️"],
+  Kor: ["흑백모드 🌚", "라이트A ☀️", "라이트B ☀️"],
+  Eng: ["Black & White 🌚", "LightA ☀️", "LightB ☀️"],
+  Ger: ["Black & White 🌚", "LightA ☀️", "LightB ☀️"],
 };
 
 let currentLang = "Kor"; // 기본 한국어
@@ -139,18 +138,33 @@ const langOptions = document.querySelectorAll(".lang-options li");
 
 const languageData = {
   Kor: {
-    smallMenu: ["📁 포스터 디자인", "📁 웹 페이지 디자인", "📁 일러스트 디자인", "📁 영상 디자인"],
-    mainMenu: ["프로젝트", "소개", "연락처", "블로그"],
+    smallMenu: [
+      "⭐ 포스터 디자인",
+      "⭐ 웹 페이지 디자인",
+      "⭐ 일러스트 디자인",
+      "⭐ 영상 디자인",
+    ],
+    mainMenu: ["프로젝트", "연락처", "블로그", "소개"],
     flag: "🇰🇷 한국어",
   },
   Eng: {
-    smallMenu: ["📁 Poster Design", "📁 Website Design", "📁 Illustrating", "📁 Video Design"],
-    mainMenu: ["PROJECTS", "ABOUT", "CONTACTS", "BLOG"],
+    smallMenu: [
+      "╰┈➤ Poster Design",
+      "╰┈➤ Website Design",
+      "╰┈➤ Illustrating",
+      "╰┈➤ Video Design",
+    ],
+    mainMenu: ["PROJECTS", "CONTACTS", "BLOG", "ABOUT"],
     flag: "🇺🇸 English",
   },
   Ger: {
-    smallMenu: ["📁 Plakatgestaltung", "📁 Webseiten Design", "📁 Illustrationen", "📁 Videodesign"],
-    mainMenu: ["PROJEKTS", "ÜBER", "KONTAKT", "FOLGEN SIE UNS"],
+    smallMenu: [
+      "🖱️ Plakatgestaltung",
+      "🖱️ Webseiten Design",
+      "🖱️ Illustrationen",
+      "🖱️ Videodesign",
+    ],
+    mainMenu: ["PROJEKTS", "KONTAKT", "FOLGEN SIE UNS", "ÜBER"],
     flag: "🇩🇪 Deutsch",
   },
 };
@@ -161,7 +175,7 @@ langToggleBtn.addEventListener("click", () => {
 });
 
 // 옵션 클릭 → 언어 변경
-langOptions.forEach((li) => { 
+langOptions.forEach((li) => {
   li.addEventListener("click", () => {
     const selectedLang = li.dataset.lang;
     const lang = languageData[selectedLang];
@@ -219,11 +233,50 @@ const resizeObserver = new ResizeObserver(updateContentBoxSize);
 resizeObserver.observe(document.body);
 */
 
-// 화면 특정 위치로 스크롤 이동  
-const button1 = document.getElementById('btn-main-black');
-const section1 = document.getElementById('footer');
+// 화면 특정 위치로 스크롤 이동
+const button1 = document.getElementById("btn-main-contact");
+const section1 = document.getElementById("footer");
 
-button1.addEventListener('click', () => {
-    window.scrollBy({top: section1.getBoundingClientRect().top, behavior: 'smooth'});
+button1.addEventListener("click", () => {
+  window.scrollBy({
+    top: section1.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+
+const webpj = document.getElementById("web-pj");
+const projects_container = document.getElementById("projects-container");
+
+webpj.addEventListener("click", () => {
+  window.scrollBy({
+    top: projects_container.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+
+
+// 무한 슬라이드를 위한 자동 복제
+window.addEventListener('DOMContentLoaded', () => {
+  const slider = document.getElementById('autoSlider');
+  const items = slider.querySelectorAll('.slider-item');
+  const totalItems = items.length;
+
+  for (let i = 0; i < totalItems; i++) {
+    const clone = items[i].cloneNode(true);
+    slider.appendChild(clone);
+  }
+});
+// 슬라이드 자동 재생
+let currentIndex = 0;
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("slider-item")) {
+    document.getElementById("modal-img").src = e.target.src;
+    document.getElementById("slider-modal").classList.remove("hidden");
+  }
+});
+
+document.querySelector(".close-btn").addEventListener("click", () => {
+  document.getElementById("slider-modal").classList.add("hidden");
 });
 
