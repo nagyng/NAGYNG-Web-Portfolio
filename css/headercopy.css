@@ -12,11 +12,11 @@ nav { margin: 0; display: flex; }
 .language-dropdown { grid-column: span 1; } 
 .index-menu-container > * { margin: 0; } 
 .index-menu { font-weight: bold; margin: 0 ; width: auto; height: auto; } 
-.star-button-box { width: 4.5rem; height: 2rem; border: 1px solid var(--so_fresh); border-radius: 3rem; margin-right: -0.7rem; } 
+.star-button-box { width: 4.5rem; height: 2rem; border: 1px solid var(--so_fresh); border-radius: 3rem;  } 
 
 .fab img { width: 3rem; height: 3rem; position: absolute; right: 0.5rem; top:1.5rem } 
 /* #fab 이모지 */
-#fab { float: right; scale: 2; width: 50px; height: 50px; position: fixed; top:90vh; right: 0; z-index: 9999; } 
+#fab { float: right; scale: 2; width: 50px; height: 50px; position: fixed; bottom: 5vh; right: 0; z-index: 9999; } 
 
 .brand-container { grid-template-columns: repeat(4, 1fr); } 
 .brand-box { grid-column: span 4; width: 100%; } 
@@ -41,9 +41,9 @@ nav { margin: 0; display: flex; }
  .header { padding: 1.5rem; } 
  .fab { display: none; }  
  nav { display: block; }
- .language-dropdown { width: 10rem; }
- .index-menu { margin: 0 1.5rem 3rem 1rem; min-width: 7.5vw; } 
- .star-button-box-container { margin: 0 1.2rem 0 1rem; } 
+ .language-dropdown { width: 8rem; }
+ /* .index-menu { margin: 0 1.5rem 3rem 1rem; min-width: 7.5vw; }  */
+ /* .star-button-box-container { margin: 0 1.2rem 0 1rem; }  */
  }
  
  

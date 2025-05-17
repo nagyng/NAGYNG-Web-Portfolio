@@ -1,5 +1,7 @@
 /* 00_style.css */ 
  @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+ @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+  
 /* CSS Custom Properties */
 :root { 
     /* 2025-03-15 */ 
@@ -60,7 +62,13 @@
  
 * { margin:0; padding: 0; /* 공통디자인: 마진/패딩 0 */ 
     box-sizing: border-box;  /* width/height 기준: 외곽선 변경 */ } 
-body { /* body: 웹폰트 */ font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
+body { /* body: 웹폰트 */ 
+    /* font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic';  */
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal; }
 li {list-style-type: none;} 
 a { text-decoration: none;  color: var(--black);} 
 .primary-btn { /* 커스텀 버튼 */ background-color: var(--blue-light-30); color: white; font-size: 14px; border: 1px solid var(--blue-light-30); padding: 13px 16px 13px 16px; }
