@@ -10,9 +10,9 @@ $(function () {
  
 
 // 햄버거(.fab) 클릭하면 메뉴(.menu) 보이기/숨기기
-$(function () {
-  $(".fab").click(function () {
-    $(".index-menu").toggle();
-  });
-});
+// $(function () {
+//   $(".fab").click(function () {
+//     $(".index-menu").toggleClass("open"); 
+//   });
+// });
  

@@ -209,30 +209,6 @@ const contentBox = document.querySelector(".content-box");
 const title01 = document.querySelector(".title01");
 const title02 = document.querySelector(".title02");
 
-// 위치 기반 사이즈 재조정 함수
-/*
-function updateContentBoxSize() {
-  requestAnimationFrame(() => {
-    const boxRect = contentBox.getBoundingClientRect();
-    const t1Rect = title01.getBoundingClientRect();
-    const t2Rect = title02.getBoundingClientRect();
-
-    const bottomMost = Math.max(t1Rect.bottom, t2Rect.bottom);
-    const rightMost = Math.max(t1Rect.right, t2Rect.right);
-
-    const height = bottomMost - boxRect.top;
-    const width = rightMost - boxRect.left;
-
-    contentBox.style.height = `${height}px`;
-    contentBox.style.width = `${width}px`;
-  });
-}
-
-// ResizeObserver로 전체 감시
-const resizeObserver = new ResizeObserver(updateContentBoxSize);
-resizeObserver.observe(document.body);
-*/
-
 // 화면 특정 위치로 스크롤 이동
 const button1 = document.getElementById("btn-main-contact");
 const section1 = document.getElementById("footer");
@@ -254,11 +230,38 @@ webpj.addEventListener("click", () => {
   });
 });
 
+const menuproject = document.getElementById("menu-project");
+
+menuproject.addEventListener("click", () => {
+  window.scrollBy({
+    top: projects_container.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+
+const photoshoppj = document.getElementById("photoshop-pj");
+const sliderwrapper = document.getElementById("slider-wrapper");
+
+photoshoppj.addEventListener("click", () => {
+  window.scrollBy({
+    top: sliderwrapper.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
+
+const menucontact = document.getElementById("menu-contact");
+
+menucontact.addEventListener("click", () => {
+  window.scrollBy({
+    top: section1.getBoundingClientRect().top,
+    behavior: "smooth",
+  });
+});
 
 // 무한 슬라이드를 위한 자동 복제
-window.addEventListener('DOMContentLoaded', () => {
-  const slider = document.getElementById('autoSlider');
-  const items = slider.querySelectorAll('.slider-item');
+window.addEventListener("DOMContentLoaded", () => {
+  const slider = document.getElementById("autoSlider");
+  const items = slider.querySelectorAll(".slider-item");
   const totalItems = items.length;
 
   for (let i = 0; i < totalItems; i++) {
@@ -279,4 +282,62 @@ document.addEventListener("click", function (e) {
 document.querySelector(".close-btn").addEventListener("click", () => {
   document.getElementById("slider-modal").classList.add("hidden");
 });
+
+// 스와이퍼
+const swiper = new Swiper('.illustrationWorks', {
+  loop: false,
+  centeredSlides: true,
+  slidesPerView: 5,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  speed: 500,
+  breakpoints: {
+    1024: { slidesPerView: 5 },
+    768: { slidesPerView: 3 },
+    480: { slidesPerView: 1.3 }
+  },
+  slideToClickedSlide: true,
+  watchSlidesProgress: true,
+  on: {
+    slideChangeTransitionEnd: function () {
+      applyScaleEffect(this);
+    },
+    init: function () {
+      applyScaleEffect(this);
+    }
+  }
+});
+
+function applyScaleEffect(swiper) {
+  const centerIndex = swiper.activeIndex;
+  const total = swiper.slides.length;
+  swiper.slides.forEach((slide, i) => {
+    const dist = Math.abs(i - centerIndex);
+    let scale = 1;
+    if (dist === 0) scale = 1.5;
+    else if (dist === 1) scale = 0.7;
+    else if (dist === 2) scale = 0.4;
+    else scale = 0.3;
+
+    slide.style.transform = `scale(${scale})`;
+    slide.style.opacity = dist === 0 ? '1' : '0.5';
+    slide.style.zIndex = 100 - dist;
+  });
+}
+
+document.querySelectorAll('.illustrationBox img').forEach(img => {
+  img.addEventListener('click', () => {
+    document.getElementById('illustrationModal').style.display = "flex";
+    document.getElementById('modalImage').src = img.src;
+    document.getElementById('modalCaption').innerText = img.alt;
+  });
+});
+
+document.querySelector('.close-btn2').addEventListener('click', () => {
+  document.getElementById('illustrationModal').style.display = "none";
+});
+
 
