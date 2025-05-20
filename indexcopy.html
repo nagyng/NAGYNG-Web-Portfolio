@@ -36,7 +36,7 @@
                 ><img src="./img/icon/title.png" alt="brand" />&nbsp;</a
               >
             </h1>
-        <div class="typing" id="typing"></div>
+            <div class="typing" id="typing"></div>
             <!-- 
             <div class="profile">
               <img src="./img/main/Profile Picture.png" alt="profile" /> 
@@ -49,12 +49,12 @@
             /></a>
           </div>
 
-          <!-- 기존 nav 앞에 삽입 -->
+          <!-- nav -->
           <div class="fixed-menu-box">
             <ul class="index-menu">
-              <li><a href="./projects.html">프로젝트</a></li>
-              <li><a href="./contact.html">연락처</a></li>
-              <li><a href="#">블로그</a></li>
+              <li id="menu-project"><a href="#">프로젝트</a></li>
+              <li id="menu-contact"><a href="#">연락처</a></li>
+              <li id="menu-blog"><a href="#">블로그</a></li>
             </ul>
 
             <!-- 추가된 항목 -->
@@ -77,41 +77,11 @@
               </div>
             </div>
           </div>
-
-          <!-- 기존 nav -->
-          <!--
-          <nav class="index-menu-container">
-            <div class="language-dropdown">
-              <button class="lang-toggle-btn">
-                <span class="flag">🇰🇷 한국어</span>
-              </button>
-              <ul class="lang-options">
-                <li data-lang="Kor">🇰🇷 한국어</li>
-                <li data-lang="Eng">🇺🇸 English</li>
-                <li data-lang="Ger">🇩🇪 Deutsch</li>
-              </ul>
-            </div>
-             
-            <ul class="index-menu">
-              <li><a href="./projects.html">프로젝트</a></li>
-              <li><a href="./contact.html">연락처</a></li>
-              <li><a href="#">블로그</a></li>
-            </ul> 
-
-            <div class="star-button-box-container">
-              <div class="star-button-box" id="theme-color">
-                <p id="theme-color-text" class="theme-color-text">*</p>
-                <p id="current-mode-text" class="mode-label">다크모드 🌚</p>
-              </div>
-            </div>
-          </nav>
-          -->
         </div>
-        
 
         <div class="introduction-box">
           <div class="profile_pc">
-            <img src="./img/main/emoji-playful-face-wide.png" alt="profile" /> 
+            <img src="./img/main/이모지웃는얼굴보라.png" alt="profile" />
           </div>
           <div class="introduction-text">
             <p class="introduction-text-1">
@@ -155,43 +125,6 @@
           <!-- .section end -->
         </div>
 
-        
-
-        <div class="container clear container-01">
-          <div class="content-area clear">
-            <div class="darkmode-box">
-              <!-- <div id="typing"></div> -->
-            </div>
-
-            <!-- <aside>
-              <ul class="index-small-menu">
-                <li>
-                  <a class="index-small-menu-a" href="#"
-                    ><p>⭐ 포스터 디자인</p></a
-                  >
-                </li>
-                <li>
-                  <a class="index-small-menu-a" id="web-pj" href="#"
-                    ><p>⭐ 웹 페이지 디자인</p></a
-                  >
-                </li>
-                <li>
-                  <a class="index-small-menu-a" href="#"
-                    ><p>⭐ 일러스트 디자인</p></a
-                  >
-                </li>
-                <li>
-                  <a class="index-small-menu-a" href="#"
-                    ><p>⭐ 영상 디자인</p></a
-                  >
-                </li>
-              </ul>
-            </aside> -->
-          </div>
-        </div>
-        <!-- .container end -->
-
-
         <!-- 배경 로고 타이포 디자인 -->
         <div
           class="title-v2"
@@ -207,6 +140,51 @@
           <img id="modal-img" src="" alt="fullscreen" />
         </div>
 
+        <!-- NEW aside -->
+        <div class="projects-intro-section-box">
+          <p class="projects-intro-section-title">나경의 대표작</p>
+          <p class="projects-intro-section-subtitle">Nagyng's featured work</p>
+        </div>
+        <aside class="service-cards" data-aos="fade-up">
+          <div class="card">
+            <img
+              src="./img/prog-lang-icons/Photoshop.png"
+              id="photoshop-pj"
+              alt="포스터 디자인"
+            />
+            <!-- <img src="./img/projects/slider/photoshop/환경포스터-양나경.jpg" alt="포스터 디자인" /> -->
+            <p>⭐ 포스터 디자인</p>
+          </div>
+          <div class="card">
+            <img
+              src="./img/prog-lang-icons/Figma.png"
+              id="web-pj"
+              alt="웹 페이지 디자인"
+            />
+            <!-- <img src="./img/projects/Artboard 9.png" id="web-pj" alt="웹 페이지 디자인" /> -->
+            <p>⭐ 웹 페이지 디자인</p>
+          </div>
+          <div class="card">
+            <img
+              src="./img/prog-lang-icons/Illustrator.png"
+              id="illust-pj"
+              alt="일러스트 디자인"
+            />
+            <p>⭐ 일러스트 디자인</p>
+          </div>
+          <div class="card">
+            <a href="https://youtu.be/WtVLcI4CyBk" target="_blank">
+              <img
+                src="./img/prog-lang-icons/Premier Pro.png"
+                id="video-pj"
+                alt="영상 디자인"
+              />
+              <p>⭐ 영상 디자인</p></a
+            >
+          </div>
+        </aside>
+
+        
         <!-- principles -->
         <div class="principles-container">
           <div class="principles-section-box">
@@ -228,34 +206,8 @@
           </div>
         </div>
 
-
-        <!-- NEW aside -->
-            <aside class="service-cards"  data-aos="fade-up">
-              <div class="card">
-                <img src="./img/prog-lang-icons/Photoshop.png" alt="포스터 디자인" />
-                <!-- <img src="./img/projects/slider/photoshop/환경포스터-양나경.jpg" alt="포스터 디자인" /> -->
-                <p>⭐ 포스터 디자인</p>
-              </div>
-              <div class="card">
-                <img src="./img/prog-lang-icons/Figma.png" id="web-pj" alt="웹 페이지 디자인" />
-                <!-- <img src="./img/projects/Mac Studio.png" id="web-pj" alt="웹 페이지 디자인" /> -->
-                <p>⭐ 웹 페이지 디자인</p>
-              </div>
-              <div class="card">
-                <img
-                  src="./img/prog-lang-icons/Illustrator.png"
-                  alt="일러스트 디자인"
-                />
-                <p>⭐ 일러스트 디자인</p>
-              </div>
-              <div class="card">
-                <img src="./img/prog-lang-icons/Premier Pro.png" alt="영상 디자인" />
-                <p>⭐ 영상 디자인</p>
-              </div>
-            </aside>
-
         <!-- 슬라이더 -->
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" id="slider-wrapper">
           <div class="auto-slider">
             <img
               src="./img/projects/slider/photoshop/17422222.png"
@@ -321,6 +273,86 @@
           </div>
         </div>
 
+        
+      <!-- 일러스트 작업물 스와이퍼 -->
+      <div class="illustrationWorks swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img
+                src="./img/projects/ai/1747108751805-95fd471c-9f0f-4bce-99da-0c22f596703a_1.png"
+                alt="안개 낀 해변"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img src="./img/projects/ai/sns2.png" alt="안개 낀 해변" />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img src="./img/projects/ai/sns3.png" alt="안개 낀 해변" />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img
+                src="./img/projects/ai/Untitled-134.gif"
+                alt="안개 낀 해변"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img src="./img/projects/ai/움짤.gif" alt="안개 낀 해변" />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img
+                src="./img/projects/ai/기초연습-[Recovered].png"
+                alt="안개 낀 해변"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img
+                src="./img/projects/ai/기초연습-[Recovered]1.png"
+                alt="안개 낀 해변"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img
+                src="./img/projects/ai/Artboard 1.png"
+                alt="도시 속 고양이"
+              /> 
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img
+                src="./img/projects/ai/Artboard 2.png"
+                alt="햇살 아래 정원"
+              />
+            </div>
+          </div>
+          <div class="swiper-slide illustrationBox">
+            <div class="illustration-content">
+              <img src="./img/projects/ai/Asset 1.png" alt="안개 낀 해변" />
+            </div>
+          </div>
+          <!-- 필요시 추가 -->
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- 일러스트 작업물 스와이퍼 끝 -->
+
 
         <!-- 프로젝트 섹션 -->
         <div
@@ -342,6 +374,29 @@
           <span class="close-btn">✕</span>
           <img id="modal-img" src="" alt="fullscreen" />
         </div>
+      </div>
+
+
+      <!-- 스와이퍼 ✅ 모달 확대 보기 -->
+      <div id="illustrationModal" class="modal">
+        <span class="close-btn2">&times;</span>
+        <img class="modal-content" id="modalImage" alt="..." />
+        <p id="modalCaption"></p>
+      </div>
+
+      <!-- 유튜브 영상 링크 -->
+      <div class="projects-intro-section-box">
+        <p class="projects-intro-section-title">나경의 유튜브 채널</p>
+        <p class="projects-intro-section-subtitle">Nagyng's youtube channel</p>
+      </div>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/WtVLcI4CyBk?si=gNO7SMjgPb1HlmOH"
+          title="YouTube video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
       </div>
     </div>
 
@@ -367,6 +422,12 @@
 
       $(document).ready(function () {
         AOS.init();
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        $(".fab").click(function () {
+          $(".fixed-menu-box").toggle();
+        });
       });
     </script>
   </body>
