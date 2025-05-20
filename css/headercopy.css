@@ -14,9 +14,10 @@ nav { margin: 0; display: flex; }
 .index-menu { font-weight: bold; margin: 0 ; width: auto; height: auto; } 
 .star-button-box { width: 4.5rem; height: 2rem; border: 1px solid var(--so_fresh); border-radius: 3rem;  } 
 
+/* 햄버거 */
 .fab img { width: 3rem; height: 3rem; position: absolute; right: 0.5rem; top:1.5rem } 
-/* #fab 이모지 */
-#fab { float: left; scale: 2; width: 50px; height: 50px; position: fixed; bottom: 5vh; left: 0; z-index: 9999; } 
+/* #fab 화살표 이모지 */
+#fab { float: left; scale: 2; width: 50px; height: 50px; position: fixed; bottom: 4vh; left: 3rem; z-index: 9999; } 
 
 .brand-container { grid-template-columns: repeat(4, 1fr); } 
 .brand-box { grid-column: span 4; width: 100%; } 
